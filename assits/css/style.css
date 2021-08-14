@@ -1,0 +1,85 @@
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+}
+.player {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    box-shadow: 1.5px 2.5px 15.5px 0.5px #ccc;
+    padding:16px;
+    border-radius: 2px;
+}
+.dashboard{
+    
+}
+header{
+    text-align: center;
+}
+header h4 {
+    margin-top: 0;
+    color: #dc1c1c;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+header h2 {
+    font-size: 1.6rem;
+}
+.cd {
+    position: relative;
+    text-align: center;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+.cd-thumb{
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: round;
+    border-radius: 50%;
+}
+
+.control{
+
+}
+
+.control .btn {
+
+}
+.playlist{
+
+}
+.song{
+
+}
+.thumb{
+
+}
+.playlist .body {
+
+}
+.body .title{
+
+}
+.body .author{
+
+}
+.option{
+
+}
+
