@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assits/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="player">
+    <div class="player ">
         <div class="dashboard">
             <header>
                 <h4>Now playing</h4>
@@ -28,7 +28,7 @@
             <div class="control">
                 <!-- <div class="btn btn-conntain"> -->
 
-                    <div class="btn btn-reapeat">
+                    <div class="btn btn-repeat ">
                         <i class="fas fa-redo"></i>
                     </div>
                     <div class="btn btn-prev">
@@ -36,40 +36,28 @@
                     </div>
                     <div class="btn btn-toggle-play">
                         <i class="fas fa-pause icon-pause hidden"></i>
-                        <i class="fas fa-play icon-play"></i>
+                        <i class="fas fa-play icon-play "></i>
                     </div>
                     <div class="btn btn-next">
-                        <i class="fas fa-step-backward"></i>
+                        <i class="fas fa-step-backward icon-next"></i>
                     </div>
                     <div class="btn btn-random">
                         <i class="fas fa-random"></i>
                     </div>
                 </div>
                 <input type="range"  id="progress" class="progress" value="0" step="1" max="100">
+                <!-- audio chứa music -->
                 <audio src="" id="audio"></audio>
             </div>
         <!-- </div> -->
            
             <!-- playlist-->
         <div class="playlist">
-                <div class="song">
-                    <div class="thumb"
-                    style="background-image: url(https://c.wallhere.com/photos/06/30/anime_girls_tail_simple_background_anime-1990305.jpg!d);">
-                    </div>
-                    <div class="body">
-                        <h3 class="title">Tên bài hát</h3>
-                        <p class="author">Ca sĩ / nhóm nhạc</p>
-                    </div>
-                    <div class="option">
-                        <i class="fas fa-ellipsis-h"></i>
-                    </div>
-
-                </div>
-                
+               
                 
         </div>
        
    </div>
-    
+    <script src="./assets/js/js.js"></script>
 </body>
 </html>

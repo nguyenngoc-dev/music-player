@@ -1,7 +1,9 @@
 *{
     box-sizing: inherit;
 }
-
+body{
+    margin: 0;
+}
 html{
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
@@ -11,14 +13,21 @@ html{
 }
 .player {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 400px;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    width: 100%;
     box-shadow: 1.5px 2.5px 15.5px 0.5px #ccc;
     border-radius: 2px;
     background-color: #e5e5e5;
 }
+.player.playing .icon-play{
+    display: none;
+}
+.player.playing .icon-pause{
+    display: block;
+}
+
 .dashboard{
     background-color: white;
     padding: 12px;
@@ -46,13 +55,13 @@ header h2 {
     width: 200px;
     left: 50%;
     transform: translateX(-50%);
-    height: 200px;
+    /* height: 200px; */
     border-radius: 50%;
 
 }
 
 .cd-thumb{
-    height: 100%;
+    padding-top: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: round;
@@ -75,7 +84,7 @@ header h2 {
     height: 40px;
     text-align: center;
     border-radius: 50%;
-    background-color: red;
+    background-color: #dc1c1c;
     position: relative;
     
     top: -12px;
@@ -88,16 +97,37 @@ header h2 {
     transform: translate(-50%,-50%);
     color: white;
 }
-.fa-random {
-    color:red;
+.btn.active {
+    color:#dc1c1c;
 }
-.progress{
+.progress {
     width: 100%;
-    margin-top: 10px;
-}
+    overflow: hidden;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  .progress:hover::-webkit-slider-thumb {
+    background:#dc1c1c;
+    box-shadow: -500px 0 0 500px #dc1c1c;
+  }
+  .progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 12px;
+    height: 6px;
+    background: #dc1c1c;
+    box-shadow: -500px 0 0 500px #dc1c1c;
+  }
 .playlist{
     margin: 12px;
-    background-color: white;
+    background-color: #e5e5e5;
+    overflow: scroll;
+    height: 300px;
    
 }
 .song{
@@ -107,7 +137,19 @@ header h2 {
     align-items: center;
     padding:0 12px;
     margin-bottom: 12px;
+    background-color: white;
     
+}
+.song.active {
+    background-color: #dc1c1c;
+}
+.song.active .title,
+.song.active .author,
+.song.active .option {
+    color: white;
+}
+.song:active {
+    opacity: 0.7;
 }
 .thumb{
     height: 50px;
@@ -117,6 +159,9 @@ header h2 {
     background-repeat: round;
     border-radius: 50%;
     margin-right: 16px;
+}
+.icon-next {
+    transform: rotate(180deg);
 }
 
 .playlist .body {
